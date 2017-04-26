@@ -5,6 +5,14 @@ export class Hero {
   name: string;
 }
 
+const HEROES : Hero[] = [
+    {id:11,name:'Mr.Nice'},
+    {id:12,name:'Narco'},
+    {id:13,name:'Bombasto'}
+];
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,8 +20,11 @@ export class Hero {
 })
 export class AppComponent {
     title = 'Tour of Heroes';
-    hero: Hero = {
-      id: 1,
-      name: 'Windstorm'
-    };
+    heroes = HEROES;
+    selectedHero : Hero;
+    
+    onSelect(hero:Hero):void{
+    this.selectedHero=hero;
+    }
+        
 }
