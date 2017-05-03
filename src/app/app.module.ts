@@ -11,13 +11,15 @@ import { AppRoutingModule }     from './app-routing.module';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HerodetailComponent } from './herodetail/herodetail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent ,
     HeroesComponent,
     DashboardComponent,
-    HerodetailComponent
+    HerodetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
