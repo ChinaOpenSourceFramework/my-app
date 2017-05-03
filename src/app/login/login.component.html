@@ -3,3 +3,9 @@
 	<input [(ngModel)]="password" placeholder="password" />
 	<button class="btn btn-primary" (click)="login()">登录</button>
 </div>
+
+<div *ngIf="message">
+	<div>
+		<label>message: </label>{{message}}
+	</div>
+</div>

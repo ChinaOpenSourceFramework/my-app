@@ -12,11 +12,11 @@ export class LoginService {
     
     constructor(private http: Http) { }
 
-    login(loginName :String,password :String): Promise<String> {
+    login(loginName :String,password :String): Promise<any> {
         return this.http
             .post(this.heroesUrl, JSON.stringify({ loginName : loginName,password : password }), {headers: this.headers})
             .toPromise()
-            .then(res => res.json().message as String)
+            .then(res => res.json() as String)
             .catch(this.handleError);
     }
 
